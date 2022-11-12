@@ -1,0 +1,327 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap');
+
+:root {
+    --text-base: #afb6c2;
+    --text-title: #d4ccb6;
+    --background: #191816;
+    --form-background: #24221f;
+    --primary-color: #ffc632;
+    --input-color: #A9AFB9;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    max-height: 97vh;
+    height: 100vh;
+    width: 100vw;
+    background-color: var(--background);
+}
+
+.container {
+    position: relative;
+    display: flex ;
+    flex-direction: column;
+    justify-content: flex-start;
+    height: 100%;
+    margin: 20px;
+}
+
+.container .logo-box img {
+    position: absolute;
+    left: 0;
+    top: 23px;
+}
+
+.content {
+    margin-top: 90px;
+}
+
+.container h1 {
+    display: flex;
+    gap: 10px;
+    color: var(--text-title);
+    font-family: 'Poppins', sans-serif;
+    font-size: 24px;
+    margin-bottom: 5px;
+}
+
+.container p {
+    color: var(--text-base);
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    margin-bottom: 27px;
+}
+
+.container .form-box {
+    position: relative;
+}
+
+.form-box form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.form-box .email {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    height: 73px;
+    width: 335px;
+}
+
+.email label {
+    color: var(--text-base);
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.email i {
+    position: absolute;
+    bottom: 16px;
+    left: 12px;
+    color: var(--text-base);
+    font-family: "Font Awesome 5 Free";
+    font-size: 18px;
+    font-weight: 900;
+    transition: all .5s ease;
+}
+
+.email:focus-within i {
+    color: var(--primary-color);
+}
+
+.email input {
+    background-color: var(--background);
+    color: var(--input-color);
+    font-family: 'Roboto', sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    width: 100%;
+    height: 44px;
+    padding: 14px 37px;
+    outline: none;
+    border: 1px solid #868686;
+    border-radius: 4px;
+    transition: all .1s ease;
+}
+
+.email input:focus-within {
+    border: 2px solid var(--primary-color);
+    outline: none;
+}
+
+.form-box .password {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    height: 73px;
+    width: 335px;
+}
+
+.password label {
+    color: var(--text-base);
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.password i {
+    position: absolute;
+    bottom: 16px;
+    left: 12px;
+    color: var(--text-base);
+    font-family: "Font Awesome 5 Free";
+    font-size: 18px;
+    font-weight: 900;
+    transition: all .5s ease;
+}
+
+.password:focus-within i {
+    color: var(--primary-color);
+}
+
+.password img:last-child {
+    position: absolute;
+    bottom: 16px;
+    right: 12px;
+    cursor: pointer;
+}
+
+.password input {
+    background-color: var(--background);
+    color: var(--input-color);
+    font-family: 'Roboto', sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    width: 100%;
+    height: 44px;
+    padding: 14px 37px;
+    outline: none;
+    border: 1px solid #868686;
+    border-radius: 4px;
+}
+
+.password input:focus-within {
+    border: 2px solid var(--primary-color);
+    outline: none;
+}
+
+.form-box .remember-box {
+    display: flex;
+    justify-content: space-between;
+    max-width: 335px;
+}
+
+.remember-box .remember-me {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.remember-me input {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    border: 1px solid #868686;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.remember-me input::after {
+    display: none;
+    content: '\f00c';
+    font-family: "Font Awesome 5 Free";
+    font-size: 18px;
+    font-weight: 900;
+    border-radius: 4px;
+    color: var(--background);
+}
+
+.remember-me input:hover {
+    background-color: var(--form-background);
+}
+
+.remember-me input:checked {
+    background-color: var(--primary-color);
+    border: 1px solid var(--primary-color);
+    outline: none;
+}
+
+.remember-me input:checked::after {
+    display: block;
+}
+
+.remember-me label {
+    color: var(--input-color);
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    cursor: pointer;
+}
+
+.remember-box a {
+    
+    text-decoration: none;
+    color: var(--primary-color);
+    font-family: 'Poppins', sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.remember-box a:hover {
+    text-decoration: underline;
+}
+
+.form-box .submit-box {
+    display: flex;
+    justify-content: center;
+}
+
+.submit-box input {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--primary-color);
+    color: var(--background);
+    font-family: 'Poppins', sans-serif;
+    font-size: 18px;
+    font-weight: 600;
+    text-transform: uppercase;
+    width: 100%;
+    max-width: 335px;
+    height: 51px;
+    outline: none;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.submit-box input:hover {
+    background-color: #eeb628;
+}
+
+.container .sign-in {
+    display: flex;
+    justify-content: center;
+    margin-top: 14px;
+    color: var(--primary-color);
+    font-family: 'Roboto', sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+}
+
+.sign-in a {
+    text-decoration: none;
+    color: var(--primary-color);
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+}
+
+.sign-in a:hover {
+    text-decoration: underline;
+}
+
+@media (min-width: 990px) {
+    body {
+        background-image: url(./assets/side-image.jpg);
+        background-repeat: no-repeat;
+        background-position: right;
+        background-size: contain;
+        transition: background-image .4s ease;
+        max-height: 98vh;
+    }
+
+    .container {
+        max-width: 57.1%;
+        align-items: center;
+    }
+
+    .container .logo-box img {
+        left: 20px;
+    }
+
+    .content {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: center;
+        padding: 55px 119px;
+        margin-top: 194px;
+        background-color: var(--form-background);
+        max-width: 572px;
+        max-height: 512px;
+    }
+}
